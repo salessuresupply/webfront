@@ -5,6 +5,8 @@ import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import Services from './components/Services';
 import Footer from './components/Footer';
+import WhySSHP from './components/WhySSHP';
+import Industries from './components/Industries';
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <Header />
       <HeroSection />
       <Services />
+      <WhySSHP />
+      <Industries />
       <Footer />
     </div>
   );
