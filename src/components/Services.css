@@ -1,0 +1,89 @@
+.services-section {
+    background-color: white;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .services-section h2 {
+    font-size: 36px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: left;
+    margin-left: 70px;
+  }
+  
+  .services-section h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .services-section p {
+    font-size: 26px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 40px;
+    text-align: left;
+    margin-left: 70px;
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjust column width */
+    grid-auto-rows: 1fr; /* Ensures rows also distribute space */
+    gap: 10px; /* Adjust spacing between grid items */
+    width: auto; /* Full width */
+    box-sizing: border-box; /* Include padding in dimensions */
+    padding: 10px; /* Optional padding */
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+  .service-card {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  
+  .service-card h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .service-card {
+    text-align: left;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #ffffff; /* Card background */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    background-color: #f0f8ff; /* Light blue tint on hover */
+
+  }
+  
+  .service-card p {
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+    margin-left:0px;
+  }
+  .service-icon {
+    width: 40px; /* Icon width */
+    height: 40px; /* Icon height */
+    margin-top: 10px; /* Spacing between text and icon */
+    display: block; /* Ensures proper alignment */
+    object-fit: contain; /* Ensures the image fits within the box without distortion */
+    display: block; /* Makes the element block-level, required for margin auto */
+    margin-left: auto; /* Centers horizontally */
+    margin-right: auto; /* Centers horizontally */
+  }
+  
