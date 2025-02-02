@@ -1,29 +1,43 @@
-// Header.js
-import React from 'react';
-import './Header.css';
+import React, { useState } from "react";
+import "./Header.css";
 
-function Header() {
+const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <header className="header">
+      {/* Logo */}
       <div className="logo">
-        <a href='/'>
-          <img src={'/assets/icons/logo.png'} alt="sureSupply Logo" />
-        </a>
+        <img src="/assets/icons/logo.png" alt="Logo" />
       </div>
-      <div className="right-section">
-        <nav className="nav-bar">
-          <ul>
-            <li><a href="/">HOME</a></li>
-            <li><a href="about">ABOUT US</a></li>
-            <li><a href="contact">CONTACT US</a></li>
-          </ul>
-        </nav>
-        <div className="search-bar">
-          <input type="text" placeholder="Search..." />
+
+      {/* Hamburger Menu for Mobile */}
+      <div className="menu-icon" onClick={() => setMenuOpen(true)}>
+        ☰
+      </div>
+
+      {/* Sidebar Panel */}
+      <div className={`mobile-menu ${menuOpen ? "show" : ""}`}>
+        <div className="close-btn" onClick={() => setMenuOpen(false)}>
+          ✖
         </div>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/aboutus">About Us</a></li>
+          <li><a href="/contactus">Contact Us</a></li>
+        </ul>
       </div>
+
+      {/* Desktop Navigation */}
+      <nav className="nav-bar">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/aboutus">About Us</a></li>
+          <li><a href="/contactus">Contact Us</a></li>
+        </ul>
+      </nav>
     </header>
   );
-}
+};
 
 export default Header;

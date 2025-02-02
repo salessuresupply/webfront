@@ -20,7 +20,7 @@ function App() {
         <Route path="/" element={<Home />} />
 
         {/* Contact path => renders ContactUS */}
-        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/contactus" element={<ContactUs />} />
 
         {/* (Optional) Catch-all route => 404 or NotFound */}
         {/* <Route path="*" element={<NotFound />} /> */}

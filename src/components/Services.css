@@ -1,82 +1,94 @@
 .services-section {
-    background-color: white;
-    /* background-color: #F7F7F7; */
-    padding: 60px 20px;
-    text-align: center;
-  }
-  
-  .services-section h2 {
-    font-size: 36px;
-    /* font-family: 'Courier New', Courier, monospace; */
-    color: #333;
-    margin-bottom: 20px;
-    text-align: left;
-    margin-left: 70px;
-  }
-  
-  .services-section h4 {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .services-section p {
-    font-size: 16px;
-    /* font-family: 'Courier New', Courier, monospace; */
-    margin-bottom: 40px;
-    text-align: left;
-    color: #666;
-    margin-left: 70px;
-  }
-  
-  /* Replace the grid with a Flexbox container */
+  background-color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: left;
+  margin-left: 70px;
+}
+
+.services-section h4 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.services-section p {
+  font-size: 16px;
+  margin-bottom: 40px;
+  text-align: left;
+  color: #666;
+  margin-left: 70px;
+}
+
+/* Grid Layout (Default for Large Screens) */
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 10px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+/* Card Styling */
+.service-card {
+  background-color: #F7F7F7;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 250px;
+  flex: 1 1 300px;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: #f0f8ff;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+  margin-left: 0;
+}
+
+.service-icon {
+  width: 40px; 
+  height: 40px; 
+  margin-top: 10px;
+  display: block; 
+  object-fit: contain;
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+/* Hide carousel by default */
+.services-carousel {
+  display: none;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
   .services-grid {
-    display: flex;
-    flex-wrap: wrap;         /* Allows boxes to wrap to the next row */
-    gap: 20px;              /* Space between each card */
-    justify-content: center;/* Center all cards horizontally */
-    padding: 10px;
-    margin-left: 60px;
-    margin-right: 60px;
+      display: none; /* Hide grid layout on mobile */
   }
-  
-  /* Each card will be flexible */
+
+  .services-carousel {
+      display: block; /* Show carousel only on mobile */
+  }
+
   .service-card {
-    background-color: #F7F7F7;
-    /* padding: 30px; */
-    border-radius: 8px;
-    border: 1px solid #e0e0e0;
-    text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    max-width: 250px ;
-    /* The card will try to take 300px width, but can shrink or grow */
-    flex: 1 1 300px; 
-    /* You can also try min-width / max-width to fine-tune the layout:
-       e.g.   flex: 1 1 calc(33.33% - 40px); for a 3-column layout
-    */
+      max-width: 80%;
+      padding: 20px;
   }
-  
-  .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    background-color: #f0f8ff;
-  }
-  
-  .service-card p {
-    font-size: 14px;
-    color: #555;
-    text-align: center;
-    margin-left: 0;
-  }
-  
-  .service-icon {
-    width: 40px; 
-    height: 40px; 
-    margin-top: 10px;
-    display: block; 
-    object-fit: contain;
-    margin-left: auto; 
-    margin-right: auto; 
-  }
-  
+}
