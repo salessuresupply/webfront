@@ -1,23 +1,33 @@
-// App.js
+// src/App.js
 import React from 'react';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// Layout components
 import Header from './components/Header';
-import HeroSection from './components/HeroSection';
-import Services from './components/Services';
 import Footer from './components/Footer';
-import WhySSHP from './components/WhySSHP';
-import Industries from './components/Industries';
+
+// Page components
+import Home from './components/Home';
+import ContactUs from './components/ContactUs';
 
 function App() {
   return (
-    <div className="App">
+    <Router>
       <Header />
-      <HeroSection />
-      <Services />
-      <WhySSHP />
-      <Industries />
+      
+      <Routes>
+        {/* Home path => renders Home.js, which includes HeroSection, Services, WhySSHP, Industries */}
+        <Route path="/" element={<Home />} />
+
+        {/* Contact path => renders ContactUS */}
+        <Route path="/contact" element={<ContactUs />} />
+
+        {/* (Optional) Catch-all route => 404 or NotFound */}
+        {/* <Route path="*" element={<NotFound />} /> */}
+      </Routes>
+
       <Footer />
-    </div>
+    </Router>
   );
 }
 

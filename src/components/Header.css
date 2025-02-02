@@ -8,6 +8,7 @@
   background-color: #ffffff;
   background-color: #ffffff;
   position: relative; /* Required for pseudo-element */
+  margin-bottom: 2px;
 }
 
 .header::after {
@@ -43,14 +44,20 @@
 
 .nav-bar ul li a {
   text-decoration: none;
-  color: #333;
-  font-size: 16px;
-  font-weight: 500;
+  /* color: #333333a5; */
+  color: #ef5123;
+   /* color: #007bff;  */
+  /* font-size: 16px; */
+  /* font-weight: 500; */
+  font-size: 1.2rem;  /* or any size you prefer */
+  font-weight: bold;  /* sets the text to bold */
   transition: color 0.3s;
 }
 
 .nav-bar ul li a:hover {
-  color: #007bff; /* Change this to your preferred hover color */
+  color: #007bff; 
+  /* color: #ef5123; */
+
 }
 
 .search-bar {
@@ -62,7 +69,7 @@
 .search-bar input {
   padding: 5px 10px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 8px;
   font-size: 14px;
   outline: none;
   width: 200px;

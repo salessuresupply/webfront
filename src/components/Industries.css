@@ -1,36 +1,100 @@
+.industry-parant {
+  background-color: #fff;           /* Ensure the background is white */
+  padding: 40px 40px;              /* Double top/bottom padding (was 20px) */
+}
+.industries-heading {
+  margin-left: 20px;
+  font-size: 2rem; /* Adjust as needed */
+}
+
+/* Orange for “Industries” */
+.industry-word {
+  color: #ef5123;
+}
+
+/* Blue for “we serve” */
+.we-serve-word {
+  color: black;
+}
+
+
 .industries-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
     padding: 20px;
+    margin-bottom: 40px;
+    /* height: 100vh; */
+    height: max-content;
   }
-  
-  .industry-card {
-    flex: 1;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .industry-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 5px;
-  }
-  
-  .industry-title {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 3px;
-    font-size: 14px;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  
+ /* break */
+
+
+.industry-card {
+  /* Forces each card to be 200px wide (or use a responsive approach) */
+  flex: 200px;
+
+  /* Fixed height so all cards match (adjust as needed) */
+  height: 300px;
+
+  /* Black border as per your original style */
+  border: 4px solid #000;
+
+  /* Center any inline text if needed */
+  text-align: center;
+
+  /* Make sure padding/border don’t affect width/height calculations */
+  box-sizing: border-box;
+
+  /* Position children absolutely inside */
+  position: relative;
+
+  /* Hide any overflow from child elements that exceed card boundary */
+  overflow: hidden;
+}
+
+/* Make the image fill the card, preserving aspect ratio */
+.industry-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* or `object-fit: contain` if you want the entire image visible */
+}
+
+/* Style the title at the top with a black overlay */
+.industry-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* Make the title stretch full width across the card */
+  width: 100%;
+
+  /* A dark overlay background; adjust opacity if you want it more/less transparent */
+  background-color: rgba(0, 0, 0, 0.75);
+
+  /* White text for good contrast on black overlay */
+  color: #fff;
+
+  /* Add spacing above/below the text */
+  padding: 10px 0;
+
+  /* Center the text horizontally */
+  text-align: center;
+
+  /* Make the text bigger and bold */
+  font-size: 1.2rem;
+  font-weight: bold;
+
+  /* Uppercase style as per your original design */
+  text-transform: uppercase;
+
+  /* Optionally add a slight transition for a smoother effect when hovered, if desired */
+  transition: background-color 0.2s ease;
+}
+
+/* Optional: On hover, slightly darken or lighten the overlay to give a nice interactive feel */
+.industry-card:hover .industry-title {
+  background-color: rgba(0, 0, 0, 0.85);
+}

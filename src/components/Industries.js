@@ -3,6 +3,11 @@ import "./Industries.css"; // Add custom CSS for styling
 
 const Industries = () => {
   return (
+  <div className='industry-parant'>
+      <h1 className="industries-heading">
+        <span className="industry-word">INDUSTRIES,</span>
+        <span className="we-serve-word"> WE SERVE</span>
+      </h1>
     <div className="industries-container">
       <div className="industry-card">
         <img src="/assets/images/Automotive.jpeg" alt="Automotive" />
@@ -25,6 +30,7 @@ const Industries = () => {
         <div className="industry-title">PLUMBING & SANITARY</div>
       </div>
     </div>
+  </div>
   );
 };
 

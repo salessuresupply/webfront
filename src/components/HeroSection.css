@@ -1,50 +1,64 @@
+/* 
+   The hero-section is relatively positioned 
+   so we can absolutely position the image, overlay, and text within it.
+*/
 .hero-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #000;
-  color: white;
-  padding: 20px;
-}
-
-.hero-container {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  max-width: 1200px;
+  position: relative;
   width: 100%;
+  height: 70vh; /* Full viewport height; adjust as needed */
+  overflow: hidden; /* Ensures no overflow if the image is larger than the container */
 }
 
-.hero-text {
-  flex: 1;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
+/* The actual image that fills the hero. */
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; /* Ensures the image covers the entire area without distortion */
 }
 
-.hero-text h1 {
+/* 
+   The hero-overlay is the gradient layer on top of the image.
+   This example fades from transparent on the left to black on the right. 
+   Adjust the 60% to shift the fade position.
+*/
+/* .hero-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.6) 100%,
+    rgba(0, 0, 0, 1) 100%
+  );
+} */
+
+/* 
+   The text content is absolutely positioned on the right side.
+   We use transform: translateY(-50%) to vertically center it 
+   within the section.
+*/
+.hero-content {
+  position: absolute;
+  top: 50%;
+  right: 10%;  /* Adjust horizontal position */
+  transform: translateY(-50%);
+  color: #fff; /* White text color */
+  max-width: 400px;
+  text-align: right; /* Right-align text */
+}
+
+.hero-content h1 {
   font-size: 48px;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
-.hero-text p {
+.hero-content p {
   font-size: 18px;
   line-height: 1.6;
-}
-
-.hero-image {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-image img {
-  max-height: 100%;
-  max-width: 100%;
-  object-fit: contain; /* Ensures the image fits without distortion */
-  border-radius: 8px;
 }
