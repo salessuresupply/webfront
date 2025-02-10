@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom"; // Import NavLink
 import "./Header.css";
 
 const Header = () => {
@@ -22,18 +23,63 @@ const Header = () => {
           ✖
         </div>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/aboutus">About Us</a></li>
-          <li><a href="/contactus">Contact Us</a></li>
+          <li>
+            <NavLink 
+              to="/" 
+              className={({ isActive }) => isActive ? "active" : ""}
+              onClick={() => setMenuOpen(false)}  // Optionally close menu on click
+            >
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink 
+              to="/aboutus" 
+              className={({ isActive }) => isActive ? "active" : ""}
+              onClick={() => setMenuOpen(false)}
+            >
+              About Us
+            </NavLink>
+          </li>
+          <li>
+            <NavLink 
+              to="/contactus" 
+              className={({ isActive }) => isActive ? "active" : ""}
+              onClick={() => setMenuOpen(false)}
+            >
+              Contact Us
+            </NavLink>
+          </li>
         </ul>
       </div>
 
       {/* Desktop Navigation */}
       <nav className="nav-bar">
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/aboutus">About Us</a></li>
-          <li><a href="/contactus">Contact Us</a></li>
+          <li>
+            <NavLink 
+              to="/" 
+              className={({ isActive }) => isActive ? "active" : ""}
+            >
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink 
+              to="/aboutus" 
+              className={({ isActive }) => isActive ? "active" : ""}
+            >
+              About Us
+            </NavLink>
+          </li>
+          <li>
+            <NavLink 
+              to="/contactus" 
+              className={({ isActive }) => isActive ? "active" : ""}
+            >
+              Contact Us
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </header>

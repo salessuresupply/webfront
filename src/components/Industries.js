@@ -18,16 +18,20 @@ const Industries = () => {
         <div className="industry-title">ELECTRONICS & ELECTRICAL</div>
       </div>
       <div className="industry-card">
-        <img src="/assets/images/AeroSpace.jpeg" alt="Aerospace" />
-        <div className="industry-title">AEROSPACE</div>
+        <img src="/assets/images/HVACIndustryImage.jpg" alt="Aerospace" />
+        <div className="industry-title">HVAC Industry </div>
       </div>
       <div className="industry-card">
         <img src="/assets/images/HealthAndAirConditioning.jpeg" alt="Heating, Ventilation & Air-Conditioning" />
-        <div className="industry-title">HEATING, VENTILATION & AIR-CONDITIONING</div>
+        <div className="industry-title">AEROSPACE</div>
       </div>
       <div className="industry-card">
         <img src="/assets/images/nuts.jpeg" alt="Plumbing & Sanitary" />
         <div className="industry-title">PLUMBING & SANITARY</div>
+      </div>
+      <div className="industry-card">
+        <img src="/assets/images/hydraulics-vs-pneumatics-header.jpg" alt="Plumbing & Sanitary" />
+        <div className="industry-title">hydraulics-pneumatics</div>
       </div>
     </div>
   </div>

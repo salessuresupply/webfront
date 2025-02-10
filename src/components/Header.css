@@ -6,7 +6,7 @@
   padding: 10px 20px;
   background-color: #ffffff;
   position: relative;
-  margin-bottom: 2px;
+  /* margin-bottom: 2px; */
 }
 
 /* Underline Effect */
@@ -156,4 +156,16 @@
   .menu-icon, .mobile-menu {
     display: none; /* Hide hamburger menu and panel on larger screens */
   }
+}
+
+/* Active link styling */
+.nav-bar ul li a.active,
+.mobile-menu ul li a.active {
+  color: #007bff;
+}
+
+/* Optional: Keep the hover effect (if desired) */
+.nav-bar ul li a:hover,
+.mobile-menu ul li a:hover {
+  color: #007bff;
 }

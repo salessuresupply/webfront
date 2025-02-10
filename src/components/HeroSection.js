@@ -4,12 +4,19 @@ import './HeroSection.css';
 function HeroSection() {
   return (
     <section className="hero-section">
-      {/* Image element */}
-      <img
-        className="hero-image"
-        src="/assets/images/homebanner.jpeg"
-        alt="Manufacturing Services"
-      />
+      <picture>
+        {/* For mobile devices (viewport width 767px and below) */}
+        <source
+          media="(max-width: 767px)"
+          srcSet="/assets/images/homebannerMobile.png"
+        />
+        {/* Fallback image for larger devices */}
+        <img
+          className="hero-image"
+          src="/assets/images/homebanner.jpeg"
+          alt="Manufacturing Services"
+        />
+      </picture>
 
       {/* Gradient overlay */}
       <div className="hero-overlay"></div>
