@@ -18,7 +18,7 @@ const WhySSHP = () => {
       icon: "Asset66.png",
       title: "Your Trusted Partner",
       description:
-        "Count on us for unmatched reliability—lowest rates, on-time delivery, quality products, and flexible payment terms. We’re the platform buyer’s trust",
+        "Count on us for unmatched reliability lowest rates, on-time delivery, quality products, and flexible payment terms. We’re the platform buyer’s trust",
     },
     {
       icon: "Asset666.png",
@@ -30,7 +30,7 @@ const WhySSHP = () => {
       icon: "Asset88.png",
       title: "Simplified Procurement",
       description:
-        "We handle supplier management and procurement hassles. One contact, seamless execution, and aligned strategies—effortless for you!",
+        "We handle supplier management and procurement hassles. One contact, seamless execution, and aligned strategies effortless for you!",
     },
     {
       icon: "Asset99.png",
@@ -48,10 +48,10 @@ const WhySSHP = () => {
 
   const supplierCards = [
     { icon: "businessOppo.png", title: "Continuous Business Opportunities", description: "Access to a large network of high-demand buyers from OEMs and top companies, ensuring a steady flow of business." },
-    { icon: "hassleFree.png", title: "Hassle-Free Buyer Acquisition", description: "Focus entirely on your production while we seamlessly connect you with trusted buyers—no marketing effort required!" },
-    { icon: "noFee.png", title: "No Subscription Fees", description: "Get business at no cost. We don’t charge subscriptions fees—your growth is our only priority!" },
+    { icon: "hassleFree.png", title: "Hassle-Free Buyer Acquisition", description: "Focus entirely on your production while we seamlessly connect you with trusted buyers no marketing effort required!" },
+    { icon: "noFee.png", title: "No Subscription Fees", description: "Get business at no cost. We don’t charge subscriptions fees your growth is our only priority!" },
     { icon: "timelyPayment.png", title: "Timely Payments", description: "Your payments are always on time and fully secure with us. Partner with confidence, knowing we prioritize your financial peace of mind." },
-    { icon: "endToEndSupport.png", title: "End-to-End Support", description: "We’re with you at every step—from manufacturing to delivery—ensuring seamless order execution." },
+    { icon: "endToEndSupport.png", title: "End-to-End Support", description: "We’re with you at every step from manufacturing to delivery ensuring seamless order execution." },
   ];
 
   const cards = isBuyer ? buyerCards : supplierCards;

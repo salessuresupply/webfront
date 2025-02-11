@@ -6,7 +6,7 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Link from "@mui/material/Link";
-import { LinkedIn, Home, Phone as PhoneIcon, Facebook, Close as CloseIcon, MailOutline } from "@mui/icons-material";
+import { LinkedIn, Home, Phone as PhoneIcon, Facebook, Instagram as CloseIcon, MailOutline } from "@mui/icons-material";
 
 const theme = createTheme({
   typography: {
@@ -68,10 +68,10 @@ const Footer = () => {
                 <Link href="https://www.linkedin.com/company/sure-supply/" target="_blank" color="inherit" underline="hover">
                   <LinkedIn sx={{ verticalAlign: "middle", marginRight: "8px" }} />
                 </Link>
-                <Link href="https://facebook.com/" target="_blank" color="inherit" underline="hover">
+                <Link href="https://www.facebook.com/share/1BJpydDzNk/?mibextid=wwXIfr/" target="_blank" color="inherit" underline="hover">
                   <Facebook sx={{ verticalAlign: "middle", marginRight: "8px" }} />
                 </Link>
-                <Link href="https://twitter.com/" target="_blank" color="inherit" underline="hover">
+                <Link href="https://www.instagram.com/suresupplyindia?igsh=MWU2bmUwbGtiMW50cA%3D%3D&utm_source=qr" target="_blank" color="inherit" underline="hover">
                   <CloseIcon sx={{ verticalAlign: "middle" }} />
                 </Link>
               </Typography>

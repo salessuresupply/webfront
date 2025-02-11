@@ -49,7 +49,6 @@ function Services() {
   return (
     <section className="services-section">
       <h2>Our Services</h2>
-      <p>Delivering value to our buyers and suppliers</p>
       <p>
         We aggregate buyer demand and ensure efficient manufacturing through our trusted supplier network. By managing the entire process—from order allocation to production—we guarantee quality, timely delivery, and a seamless experience for both buyers and suppliers.
       </p>
