@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Box, TextField, Button, Typography, Grid, Paper, Container } from '@mui/material';
-import Footer from './Footer';
+// import Footer from './Footer';
 
 function ContactUs() {
   const [formData, setFormData] = useState({
@@ -12,7 +12,7 @@ function ContactUs() {
   });
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
