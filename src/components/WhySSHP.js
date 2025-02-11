@@ -18,7 +18,7 @@ const WhySSHP = () => {
       icon: "Asset66.png",
       title: "Your Trusted Partner",
       description:
-        "Count on us for unmatched reliability lowest rates, on-time delivery, quality products, and flexible payment terms. We’re the platform buyer’s trust",
+        "Count on us for unmatched reliability lowest rates, on-time delivery, quality products, and flexible payment terms. We’re the platform buyers trust",
     },
     {
       icon: "Asset666.png",
