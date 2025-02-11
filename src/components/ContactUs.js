@@ -27,7 +27,7 @@ function ContactUs() {
     e.preventDefault();
     setLoading(true);
     setError('');
-    const a=loading;
+    // const a=loading;
     try {
       const response = await fetch('https://suretechnology.in/api/mail/send', {
         method: 'POST',
@@ -43,6 +43,7 @@ function ContactUs() {
     } catch (err) {
       setError(err.message || 'An unexpected error occurred.');
     } finally {
+      if(loading)
       setLoading(false);
     }
   };
