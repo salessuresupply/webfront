@@ -12,7 +12,7 @@ function ContactUs() {
   });
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
-  // const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,6 +27,7 @@ function ContactUs() {
     e.preventDefault();
     setLoading(true);
     setError('');
+    const a=loading;
     try {
       const response = await fetch('https://suretechnology.in/api/mail/send', {
         method: 'POST',
