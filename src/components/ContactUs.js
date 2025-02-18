@@ -223,6 +223,7 @@ function ContactUs() {
                           variant="contained"
                           color="primary"
                           sx={{ padding: '10px 20px' }}
+                          disabled={loading}  // disable while loading
                         >
                           Submit
                         </Button>
