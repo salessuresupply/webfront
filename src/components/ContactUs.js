@@ -29,7 +29,7 @@ function ContactUs() {
     setError('');
     // const a=loading;
     try {
-      const response = await fetch('https://suretechnology.in/api/mail/send', {
+      const response = await fetch('https://suresupply.in/api/v1/send-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
