@@ -27,26 +27,36 @@ function ContactUs() {
     e.preventDefault();
     setLoading(true);
     setError('');
-    // const a=loading;
+  
+    // Build the payload in the structure required by the API
+    const payload = {
+      email: {
+        from: formData.email, // assuming the sender's email comes from the form
+        to: ["sales@suresupply.in"],
+        subject: formData.subject,
+        body: `Name: ${formData.name}\nMobile: ${formData.mobile}\n\n${formData.message}`
+      }
+    };
+  
     try {
       const response = await fetch('https://suresupply.in/api/v1/send-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       });
-
+  
       if (!response.ok) {
         throw new Error('Failed to send the message. Please try again later.');
       }
-
+  
       setSubmitted(true);
     } catch (err) {
       setError(err.message || 'An unexpected error occurred.');
     } finally {
-      if(loading)
       setLoading(false);
     }
   };
+  
 
   return (
     <div>
